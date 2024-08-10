@@ -38,6 +38,8 @@ process.on("uncaughtException", (err) => {
   process.exit(1);
 });
 
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function handleExit(signal: any) {
   console.log("signal", signal);
   console.log(`${signal} received. Closing browser...`);
